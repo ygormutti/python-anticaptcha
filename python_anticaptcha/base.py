@@ -63,9 +63,9 @@ class Job(object):
             elapsed_time += SLEEP_EVERY_CHECK_FINISHED
             if elapsed_time is not None and elapsed_time > maximum_time:
                 raise AnticaptchaException(
-                    None,
                     250,
-                    "The execution time exceeded a maximum time of {} seconds. It takes {} seconds.".format(
+                    'ERROR_CLIENT_JOB_TIMEOUT',
+                    "The execution time exceeded a maximum time of {} seconds. It took {} seconds.".format(
                         maximum_time, elapsed_time
                     ),
                 )
